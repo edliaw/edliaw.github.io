@@ -7,6 +7,7 @@ page:
 template:
   theme: sky
   editBaseUrl: https://github.com/edliaw/edliaw.github.io/edit/master
+  iconUrl: static/favicon.jpeg
   sidebar:
     collapsed: true
   urlStrategy: pretty
