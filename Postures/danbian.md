@@ -7,4 +7,4 @@ tags:
 
 # 单鞭 Dān Biān
 
-`Single whip` is moves 4, 28, 44, 49, 54, 68, and 75 in the [[[yilu]]]. It is move 4 in the [[[erlu]]].
+`Single whip` is moves 4, 28, 44, 49, 54, 68, and 75 in the [[yilu]]. It is move 4 in the [[erlu]].

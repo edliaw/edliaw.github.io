@@ -7,4 +7,4 @@ tags:
 
 # 拦擦衣 Lán Cā Yī
 
-`Block touching coat` is moves 2, 26, 52, and 67 in the [[[yilu]]]. It is move 2 in the [[[erlu]]].
+`Block touching coat` is moves 2, 26, 52, and 67 in the [[yilu]]. It is move 2 in the [[erlu]].

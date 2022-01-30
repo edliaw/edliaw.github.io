@@ -6,7 +6,7 @@ tags:
 
 # 转关 Zhuǎn Guān
 
-[Turning over of the joint](http://practicalmethod.com/2010/12/zhuan-guan-online-video-trailer/) is a concept in [[[practicalmethod]]].
+[Turning over of the joint](http://practicalmethod.com/2010/12/zhuan-guan-online-video-trailer/) is a concept in [[practicalmethod]].
 
 * Sometimes abbreviated as just "turning".
 * Position: The gaining of the `strategic position` is in the struggle for the `meridian`.

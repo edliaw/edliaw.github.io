@@ -6,4 +6,4 @@ tags:
 
 # 白鹤亮翅 Bái Hè Liàng Chì
 
-`White crane spreads its wings` is moves 6, 22, and 63 in the [[[yilu]]].
+`White crane spreads its wings` is moves 6, 22, and 63 in the [[yilu]].

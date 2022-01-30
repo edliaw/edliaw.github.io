@@ -6,4 +6,4 @@ tags:
 
 # 再收 Zài Shōu
 
-`Second closing` is move 10 in the [[[yilu]]].
+`Second closing` is move 10 in the [[yilu]].

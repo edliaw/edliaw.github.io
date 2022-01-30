@@ -7,4 +7,4 @@ tags:
 
 # 庇身捶 Pì Shēn Chuí
 
-`Fist draping over body` is move 15 in the [[[yilu]]] and also move 15 in the [[[erlu]]].
+`Fist draping over body` is move 15 in the [[yilu]] and also move 15 in the [[erlu]].

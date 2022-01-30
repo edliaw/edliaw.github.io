@@ -6,4 +6,4 @@ tags:
 
 # 初收 Chū Shōu
 
-`First closing` is move 8 in the [[[yilu]]].
+`First closing` is move 8 in the [[yilu]].

@@ -6,4 +6,4 @@ tags:
 
 # Twisting Towel
 
-拧毛巾 `níng máojīn`, or twisting towel, is a foundational exercise of [[[practicalmethod]]].
+拧毛巾 `níng máojīn`, or twisting towel, is a foundational exercise of [[practicalmethod]].
