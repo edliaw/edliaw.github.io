@@ -30,7 +30,7 @@ tags:
 
 Shun and ni are rotational directions: [[chanfa]].
 
-:::{class="relative h-0 overflow-hidden max-w-full w-full" style="padding-top: 56.25%"}
+:::{.video style="padding-top: 56.25%"}
 ```{=html}
 <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/CaEo-JPenQ8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```

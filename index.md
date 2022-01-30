@@ -1,7 +1,4 @@
 ---
-pandoc:
-  rewriteClass:
-    avatar: m-4 h-48 rounded-full float-left
 tags: 
 - home
 - people

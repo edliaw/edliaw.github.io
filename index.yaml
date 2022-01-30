@@ -11,3 +11,8 @@ template:
   sidebar:
     collapsed: true
   urlStrategy: pretty
+
+pandoc:
+  rewriteClass:
+    avatar: m-4 h-48 rounded-full float-right
+    video: relative h-0 overflow-hidden max-w-full w-full

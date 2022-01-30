@@ -1,8 +1,4 @@
 ---
-pandoc:
-  rewriteClass:
-    video: relative
-    video iframe: w-0 h-0
 date: 2020-08-02
 tags:
 - taijiquan/jibengong
@@ -31,7 +27,7 @@ tags:
     * It ends in the beginning position.
 
 Shun and ni are rotational directions: [[chanfa]].
-:::{class="relative h-0 overflow-hidden max-w-full w-full" style="padding-top: 56.25%"}
+:::{.video style="padding-top: 56.25%"}
 ```{=html}
 <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/Yu2SwuIRRHA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
