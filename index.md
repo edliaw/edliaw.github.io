@@ -1,7 +1,13 @@
-# Emanote Template
+---
+pandoc:
+  rewriteClass:
+    avatar: m-4 h-48 rounded-full float-left
+tags: 
+- home
+- people
+---
+# Edward Liaw
+![avatar](static/favicon.jpeg){.avatar}
 
-This is a Git template repository of Markdown notes that are automatically rendered using [Emanote] and hosted on [[GitHub Pages]], while enabling editing in the likes of [Visual Studio Code](https://emanote.srid.ca/start/resources/editors/vscode). For details, see https://github.com/srid/emanote-template.
-
-Any `.md` file (eg: [[GitHub Pages]]) or directory of `.md` files (eg: [[Tutorials]]) you add to the repository will be rendered automatically. For information on all features Emanote supports, see https://emanote.srid.ca/
-
-[Emanote]: https://emanote.srid.ca/
+Hi, I'm Edward.  This is a journal of my notes and insights into my practice of Chen-style Taijiquan [[practicalmethod]].
+Professionally, I work as a software engineer on bioinformatics applications and data pipelines, which may also be the topic of some of my musings.
