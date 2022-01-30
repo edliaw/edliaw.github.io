@@ -6,7 +6,7 @@ tags:
 - home
 - people
 ---
-# Edward Liaw
+# About Me
 ![avatar](static/favicon.jpeg){.avatar}
 
 Hi, I'm Edward.  This is a journal of my notes and insights into my practice of Chen-style Taijiquan [[practicalmethod]].
