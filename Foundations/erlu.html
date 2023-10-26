@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang='en'>
 
 <head>
@@ -8,48 +9,91 @@
   </title>
   
     
-      <meta property='og:description' content />
+      <meta property='og:description' content='Lit. second road, it is the second of two form routines in Chen-style Taijiquan. It is also called 炮捶 pào chuí or cannon fist.' />
       <meta property='og:site_name' content="Ed's Notes" />
+      <meta property='og:image' content />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='二路 Èrlù' />
     
     
-      <base href='/' />
+      <base href='/emanote-template/' />
       <link href='static/favicon.jpeg' rel='icon' />
     
     <meta name='generator' content='Emanote' />
 
   
-  <link href='tailwind.css?instanceId=ef8dd035-d216-42eb-8fc0-b006c50af31a' rel='stylesheet' type='text/css' />
+  
+  <link href='tailwind.css?instanceId=2da5aca2-d629-4487-90cf-315a48c01a4c' rel='stylesheet' type='text/css' />
 
-  <!-- Heist error element -->
-  <style type='text/css'>
+  <style>
+    /* Heist error element */
     strong.error {
       color: lightcoral;
       font-size: 90%;
       font-family: monospace;
     }
+
+    /* External link icon */
+    a[data-linkicon=""]::after {
+      content: ""
+    }
+
+    a[data-linkicon=none]::after {
+      content: ""
+    }
+
+    a[data-linkicon="external"]::after {
+      content: url('data:image/svg+xml,\
+      <svg xmlns="http://www.w3.org/2000/svg" height="0.7em" viewBox="0 0 20 20"> \
+        <g style="stroke:gray;stroke-width:1"> \
+          <line x1="5" y1="5" x2="5" y2="14" /> \
+          <line x1="14" y1="9" x2="14" y2="14" /> \
+          <line x1="5" y1="14" x2="14" y2="14" /> \
+          <line x1="5" y1="5" x2="9" y2="5"  /> \
+          <line x1="10" y1="2" x2="17" y2="2"  /> \
+          <line x1="17" y1="2" x2="17" y2="9" /> \
+          <line x1="10" y1="9" x2="17" y2="2" style="stroke-width:1.0" /> \
+        </g> \
+      </svg>');
+    }
+
+    a[data-linkicon="external"][href^="mailto:"]::after {
+      content: url('data:image/svg+xml,\
+        <svg \
+          xmlns="http://www.w3.org/2000/svg" \
+          height="0.7em" \
+          fill="none" \
+          viewBox="0 0 24 24" \
+          stroke="gray" \
+          stroke-width="2"> \
+          <path \
+            stroke-linecap="round" \
+            stroke-linejoin="round" \
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /> \
+        </svg>');
+    }
   </style>
-  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf' as='font' type='font/ttf' crossorigin />
+  <!-- What goes in this file will appear on near the end of <head>--><link rel='preload' href='_emanote-static/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf' as='font' type='font/ttf' crossorigin />
 
 <style>
   @font-face {
-    font-family: 'MavenPro';
-    src: url('_emanote-static/fonts/Maven_Pro/MavenPro-VariableFont_wght.ttf') format("truetype");
+    font-family: 'WorkSans';
+    /* FIXME: This ought to be: ${ema:emanoteStaticLayerUrl}/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf */
+    src: url(_emanote-static/fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format("truetype");
     font-display: swap;
   }
 
   body {
-    font-family: 'MavenPro', sans-serif;
-    /* font-variation-settings: 'wght'300; */
+    font-family: 'WorkSans', sans-serif;
+    font-variation-settings: 'wght' 350;
   }
 
   a.mavenLinkBold {
-    font-variation-settings: 'wght'500;
+    font-variation-settings: 'wght' 400;
   }
 
   strong {
-    font-variation-settings: 'wght'500;
+    font-variation-settings: 'wght' 500;
   }
 
   h1,
@@ -60,11 +104,123 @@
   h6,
   header,
   .header-font {
-    font-family: 'MavenPro', sans-serif;
+    font-family: 'WorkSans', sans-serif;
+  }
+
+  h1 {
+    font-variation-settings: 'wght' 500;
+  }
+
+  h2 {
+    font-variation-settings: 'wght' 400;
+  }
+
+  h3 {
+    font-variation-settings: 'wght' 300;
   }
 </style>
 
-  <head-main></head-main>
+
+  
+  <link rel='stylesheet' href='_emanote-static/stork/flat.css' />
+<!-- Custom Stork-search styling for Emanote -->
+<style>
+  #stork-search-container {
+    z-index: 1000;
+    background-color: rgb(15 23 42/.8);
+  }
+
+  .stork-overflow-hidden-important {
+    overflow: hidden !important;
+  }
+</style>
+
+
+<script src='_emanote-static/stork/stork.js'></script>
+
+  
+    <script id='emanote-stork' data-emanote-base-url='/emanote-template/'>
+      window.emanote = {};
+      window.emanote.stork = {
+        searchShown: false,
+        indexIsStale: false,
+        toggleSearch: function () {
+          window.emanote.stork.refreshIndex();
+          document.getElementById('stork-search-container').classList.toggle('hidden');
+          window.emanote.stork.searchShown = document.body.classList.toggle('stork-overflow-hidden-important');
+          if (window.emanote.stork.searchShown) {
+            document.getElementById('stork-search-input').focus();
+          }
+        },
+        clearSearch: function () {
+          document.getElementById('stork-search-container').classList.add('hidden');
+          document.body.classList.remove('stork-overflow-hidden-important');
+          window.emanote.stork.searchShown = false;
+        },
+
+        getBaseUrl: function () {
+          const baseUrl = document.getElementById("emanote-stork").getAttribute('data-emanote-base-url') || '/';
+          return baseUrl;
+        },
+
+        registerIndex: function (options) {
+          const indexName = 'emanote-search'; // used to match input[data-stork] attribute value
+          const indexUrl = window.emanote.stork.getBaseUrl() + '-/stork.st';
+          stork.register(
+            indexName,
+            indexUrl,
+            options);
+        },
+
+        init: function () {
+          if (document.readyState !== 'complete') {
+            window.addEventListener('load', function () {
+              stork.initialize(window.emanote.stork.getBaseUrl() + '_emanote-static/stork/stork.wasm');
+              window.emanote.stork.registerIndex();
+            });
+
+            document.addEventListener('keydown', event => {
+              if (window.emanote.stork.searchShown && event.key === 'Escape') {
+                window.emanote.stork.clearSearch();
+                event.preventDefault();
+              } else if ((event.key == 'k' || event.key == 'K') && (event.ctrlKey || event.metaKey)) {
+                window.emanote.stork.toggleSearch();
+                event.preventDefault();
+              }
+            });
+          } else {
+            // This section is called during Ema's hot reload.
+            // 
+            // Mark the current index as stale, and refresh it *only when* the
+            // user actually invokes search.
+            // 
+            // We do not refresh the index *right away*, as that will cause
+            // memory leaks in the browser. See
+            // https://github.com/srid/emanote/issues/411#issuecomment-1402056235
+            console.log("stork: Marking index as stale");
+            window.emanote.stork.markIndexAsStale();
+          }
+        },
+
+        markIndexAsStale: function () {
+          window.emanote.stork.indexIsStale = true;
+        },
+
+        refreshIndex: function () {
+          if (window.emanote.stork.indexIsStale) {
+            console.log("stork: Reloading index");
+            window.emanote.stork.indexIsStale = false;
+            // NOTE: This will leak memory. See the comment above.
+            window.emanote.stork.registerIndex({ forceOverwrite: true });
+          }
+        }
+
+      };
+
+      window.emanote.stork.init();
+    </script>
+  
+
 </head>
 
 <!-- DoNotFormat -->
@@ -100,7 +256,7 @@
             </li>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='Foundations'>
+              <a class='px-1 font-bold' href='Foundations.html'>
                 Foundations
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
@@ -111,6 +267,12 @@
         
       </ul>
     </div>
+    <button class='inline px-2 py-1 bg-gray-50 outline-none cursor-pointer focus:outline-none' title='Search (Ctrl+K)' type='button' onclick='window.emanote.stork.toggleSearch()'>
+      <svg xmlns='http://www.w3.org/2000/svg' style='width: 1rem;' class='hover:text-sky-700' f
+ fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+  <path stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'></path>
+</svg>
+    </button>
     <button class='inline px-2 py-1 text-white bg-sky-600 outline-none cursor-pointer focus:outline-none' title='Toggle sidebar' type='button' onclick="toggleHidden('sidebar')">
       <svg xmlns='http://www.w3.org/2000/svg' class='w-4' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
         <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 6h16M4 12h16M4 18h16'></path>
@@ -128,19 +290,24 @@
         <!-- Sidebar column -->
         <nav id='sidebar' class='flex-shrink hidden leading-relaxed md:block md:sticky md:top-0 md:h-full md:w-48 xl:w-64'>
           <div class='px-2 py-2 text-gray-800'>
-
             <div id='indexing-links' class='flex flex-row float-right p-2 space-x-2 text-gray-500'>
-              <a href='-/tags' title='View tags'>
+              <a href='-/tags.html' title='View tags'>
                 <svg style='width: 1rem;' class='hover:text-sky-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
                   </path>
                 </svg>
               </a>
-              <a href='-/all' title='Expand full tree'>
+              <a href='-/all.html' title='Expand full tree'>
                 <svg style='width: 1rem;' class='hover:text-sky-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
                   <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
                   </path>
                 </svg>
+              </a>
+              <a title='Search (Ctrl+K)' class='cursor-pointer' onclick='window.emanote.stork.toggleSearch()'>
+                <svg xmlns='http://www.w3.org/2000/svg' style='width: 1rem;' class='hover:text-sky-700' f
+ fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'>
+  <path stroke-linecap='round' stroke-linejoin='round' d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'></path>
+</svg>
               </a>
             </div>
 
@@ -188,7 +355,7 @@
       </svg>
       
   
-    <a class='font-bold hover:underline truncate' title='Foundations' href='Foundations'>
+    <a class='font-bold hover:underline truncate' title='Foundations' href='Foundations.html'>
       Foundations
     </a>
     
@@ -199,6 +366,41 @@
     TODO: Use <details> to toggle visibility?
   -->
   
+    
+      <!-- Variable bindings for this tree-->
+  
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-sky-600 hover:underline truncate' title='二路 Èrlù' href='Foundations/erlu.html'>
+      二路 Èrlù
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
     
       <!-- Variable bindings for this tree-->
   
@@ -222,7 +424,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Fetching Water' href='Foundations/fetchwater'>
+    <a class='hover:underline truncate' title='Fetching Water' href='Foundations/fetchwater.html'>
       Fetching Water
     </a>
     
@@ -259,7 +461,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Negative Circle' href='Foundations/negativecircle'>
+    <a class='hover:underline truncate' title='Negative Circle' href='Foundations/negativecircle.html'>
       Negative Circle
     </a>
     
@@ -296,7 +498,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Positive Circle' href='Foundations/positivecircle'>
+    <a class='hover:underline truncate' title='Positive Circle' href='Foundations/positivecircle.html'>
       Positive Circle
     </a>
     
@@ -333,7 +535,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Twisting Towel' href='Foundations/twisttowel'>
+    <a class='hover:underline truncate' title='Twisting Towel' href='Foundations/twisttowel.html'>
       Twisting Towel
     </a>
     
@@ -370,7 +572,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='一路 Yīlù' href='Foundations/yilu'>
+    <a class='hover:underline truncate' title='一路 Yīlù' href='Foundations/yilu.html'>
       一路 Yīlù
     </a>
     
@@ -382,41 +584,6 @@
   <!-- Node's children forest, displayed only on active trees
     TODO: Use <details> to toggle visibility?
   -->
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-  
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
-        </path>
-      </svg>
-      
-  
-    <a class='font-bold text-sky-600 hover:underline truncate' title='二路 Èrlù' href='Foundations/erlu'>
-      二路 Èrlù
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
   
 </div>
     
@@ -444,7 +611,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Lecture notes' href='Lecture%20notes'>
+    <a class='hover:underline truncate' title='Lecture notes' href='Lecture%20notes.html'>
       Lecture notes
     </a>
     
@@ -483,7 +650,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Other' href='Other'>
+    <a class='hover:underline truncate' title='Other' href='Other.html'>
       Other
     </a>
     
@@ -522,7 +689,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='People' href='People'>
+    <a class='hover:underline truncate' title='People' href='People.html'>
       People
     </a>
     
@@ -561,7 +728,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Postures' href='Postures'>
+    <a class='hover:underline truncate' title='Postures' href='Postures.html'>
       Postures
     </a>
     
@@ -600,7 +767,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Terms' href='Terms'>
+    <a class='hover:underline truncate' title='Terms' href='Terms.html'>
       Terms
     </a>
     
@@ -634,40 +801,45 @@
   <!-- What goes in this file will appear on top of note body-->
   
     <p class='mb-3'>
-      Lit. second road, it is the second of two form routines in Chen-style Taijiquan. It is also called 炮捶 <code class='py-0.5 px-1 rounded bg-gray-700 text-sm text-white'>pào chuí</code> or cannon fist.
+      Lit. second road, it is the second of two form routines in Chen-style Taijiquan. It is also called 炮捶 <code class='py-0.5 px-0.5 bg-gray-100'>pào chuí</code> or cannon fist.
     </p>
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'><a href='Terms/practicalmethod' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>Practical Method</a></h2><div class='relative h-0 overflow-hidden max-w-full w-full' style='padding-top: 56.25%'><div xmlhtmlRaw><iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VBvz8sLFIqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h2 class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'><a href='Terms/practicalmethod.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>Practical Method</a></h2><div class='relative h-0 overflow-hidden max-w-full w-full' style='padding-top: 56.25%'><div xmlhtmlRaw><iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/VBvz8sLFIqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div></div>
     <p class='mb-3'>
-      In relation to the <a href='Foundations/yilu' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>, the analogy is: the yilu lays the tracks, and the erlu puts the train on the tracks.
+      In relation to the <a href='Foundations/yilu.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>, the analogy is: the yilu lays the tracks, and the erlu puts the train on the tracks.
     </p>
-  <h3 id='form-names' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://docs.google.com/spreadsheets/d/1HQCIIqI1Gy40Krl2X6md_P_GNMFBc4YDTelKBQG2K4E/edit?usp=sharing' class='text-sky-600 hover:underline' target='_blank' rel='noopener'>Form names</a></h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>#</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>English</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Chinese</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>1</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Buddha’s warrior attendant pounds the mortar</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/jingangdaodui' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>金刚捣碓 Jīn Gāng Dǎo Duì</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>2</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Block touching the coat</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/lancayi' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>拦擦衣 Lán Cā Yī</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>3</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Six sealing and four closing</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/liufengsibi' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>六封四闭 Liù Fēng Sì Bì</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>4</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Single whip</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/danbian' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>单鞭 Dān Biān</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>5</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The hammer of lifting and blocking</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>搬拦捶 Bān lán chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>6</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>White ape presents fruit</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>白猿献果 Bái yuán xiàn guǒ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>7</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of protecting the heart</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>护心拳 Hù xīn quán</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>8</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Serial cannon</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>连环炮 Lián huán pào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>9</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Brush the knee</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>搂膝拗步 Lǒu xī ǎo bù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>10</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turn right and shoulder strike</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身靠 Yòu zhuǎn shēn kào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>11</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Block and enter head-on</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>径拦直入 Jìng lán zhí rù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>12</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The wind blows the plum flowers</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>风扫梅花 Fēng sǎo méi huā</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>13</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Buddha’s warrior attendant pounds the mortar</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身捣碓 Yòu zhuǎn shēn dǎo duì</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>14</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Cross the hands</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>十字手 Shí zì shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>15</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Fist draping over body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/pishenchui' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>庇身捶 Pì Shēn Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>16</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Fist covering the body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>撇身捶 Piē shēn chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>17</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Cut hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>斩手 Zhǎn shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>18</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turning flowers and playing with sleeves</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>翻花舞袖 Fān huā wǔ xiù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>19</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>20</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jump forward and strike with elbow</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>飞步拗拦肘 Fēi bù ǎo lán zhǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>21</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Grand red fist</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>大红拳 Dà hóng quán</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>22</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turn left and high pat on horse</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身高探马 Yòu zhuǎn shēn gāo tàn mǎ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>23</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Small red fist</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>小红拳 Xiǎo hóng quán</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>24</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>High pat on horse</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>高探马 Gāo tàn mǎ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>25</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shuttle</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>穿梭 Chuān suō</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>26</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Riding the donkey backward</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>倒骑驴 Dào qí lǘ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>27</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Flash the back</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>闪通背 Shǎn tōng bèi</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>28</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Step forward and fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>进步掩手捶 Jìn bù yǎn shǒu chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>29</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The whip wrapping around the body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>裹身鞭 Guǒ shēn biān</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>30</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turn right and the whip wrapping around the body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身裹身鞭 Yòu zhuǎn shēn guǒ shēn biān</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>31</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The posture of hand and elbow</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>手肘式 Shǒu zhǒu shì</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>32</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The posture of the splitting power</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>劈架子 Pī jià zi</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>33</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turning flowers and playing with sleeves</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>翻花舞袖 Fān huā wǔ xiù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>34</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>35</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Tame the tiger</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>伏虎 Fú hǔ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>36</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Brush the eyebrow</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>抹眉肱 Mǒ méi hōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>37</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right single cloud hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右单云手 Yòu dān yún shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>38</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Cut hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>拗步斩手 Ǎo bù zhǎn shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>39</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left single cloud hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左单云手 Zuǒ dān yún shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>40</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left forward thrust</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左冲 Zuǒ chōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>41</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Double fist hit downward</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>下双撞捶 Xià shuāng zhuàng chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>42</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right forward thrust</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右冲 Yòu chōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>43</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turning flowers out of the bottom of the sea</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>海底翻花 Hǎi dǐ fān huā</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>44</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>45</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Foot sweep</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>扫蹚腿 Sǎo tāng tuǐ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>46</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>47</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left fist cannon</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右拳炮捶 Yòu quán pào chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>48</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right fist cannon</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左拳炮锤 Zuǒ quán pào chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>49</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Step forward and strike with shoulder</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>进步侧靠 Jìn bù cè kào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>50</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>51</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Planting the flower upside down</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>倒插花 Dào chā huā</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>52</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left arm attack twice</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左二肱 Zuǒ èr hōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>53</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left change posture to pile stance</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左变式打桩 Zuǒ biàn shì dǎ zhuāng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>54</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left turn back and hit with cannon to the head</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左回头当门炮 Zuǒ huí tóu dāng mén pào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>55</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right arm attack twice</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右二肱 Yòu èr hōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>56</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right change posture to pile stance</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右变式打桩 Yòu biàn shì dǎ zhuāng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>57</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right turn back and hit with cannon to the head</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右回头当门炮 Yòu huí tóu dāng mén pào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>58</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>撇身捶 Piē shēn chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>59</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Elbow strike with left foot</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>拗拦肘 Ǎo lán zhǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>60</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Elbow strike with right foot</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>顺拦肘 Shùn lán zhǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>61</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Cannon comes out of the bottom</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>窝底炮 Wō dǐ pào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>62</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Block and enter head-on</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>径拦直入 Jìng lán zhí rù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>63</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The wind blows the plum flowers</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>风扫梅花 Fēng sǎo méi huā</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>64</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Buddha’s warrior attendant pounds the mortar</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身捣碓 Yòu zhuǎn shēn dǎo duì</td></tr></tbody></table><h2 id='links' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Links</h2>
+  <h3 id='form-names' class='mt-6 mb-2 text-3xl font-bold text-gray-700'><a href='https://docs.google.com/spreadsheets/d/1HQCIIqI1Gy40Krl2X6md_P_GNMFBc4YDTelKBQG2K4E/edit?usp=sharing' class='text-sky-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>Form names</a></h3><table class='mb-3'><thead><tr class='border-b-2 border-t-2 border-gray-300'><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>#</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>English</th><th class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Chinese</th></tr></thead><tbody><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>1</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Buddha’s warrior attendant pounds the mortar</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/jingangdaodui.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>金刚捣碓 Jīn Gāng Dǎo Duì</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>2</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Block touching the coat</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/lancayi.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>拦擦衣 Lán Cā Yī</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>3</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Six sealing and four closing</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/liufengsibi.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>六封四闭 Liù Fēng Sì Bì</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>4</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Single whip</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/danbian.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>单鞭 Dān Biān</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>5</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The hammer of lifting and blocking</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>搬拦捶 Bān lán chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>6</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>White ape presents fruit</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>白猿献果 Bái yuán xiàn guǒ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>7</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of protecting the heart</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>护心拳 Hù xīn quán</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>8</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Serial cannon</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>连环炮 Lián huán pào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>9</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Brush the knee</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>搂膝拗步 Lǒu xī ǎo bù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>10</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turn right and shoulder strike</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身靠 Yòu zhuǎn shēn kào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>11</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Block and enter head-on</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>径拦直入 Jìng lán zhí rù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>12</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The wind blows the plum flowers</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>风扫梅花 Fēng sǎo méi huā</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>13</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Buddha’s warrior attendant pounds the mortar</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身捣碓 Yòu zhuǎn shēn dǎo duì</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>14</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Cross the hands</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>十字手 Shí zì shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>15</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Fist draping over body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/pishenchui.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>庇身捶 Pì Shēn Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>16</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Fist covering the body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>撇身捶 Piē shēn chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>17</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Cut hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>斩手 Zhǎn shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>18</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turning flowers and playing with sleeves</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>翻花舞袖 Fān huā wǔ xiù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>19</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>20</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Jump forward and strike with elbow</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>飞步拗拦肘 Fēi bù ǎo lán zhǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>21</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Grand red fist</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>大红拳 Dà hóng quán</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>22</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turn left and high pat on horse</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身高探马 Yòu zhuǎn shēn gāo tàn mǎ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>23</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Small red fist</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>小红拳 Xiǎo hóng quán</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>24</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>High pat on horse</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>高探马 Gāo tàn mǎ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>25</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Shuttle</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>穿梭 Chuān suō</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>26</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Riding the donkey backward</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>倒骑驴 Dào qí lǘ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>27</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Flash the back</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>闪通背 Shǎn tōng bèi</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>28</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Step forward and fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>进步掩手捶 Jìn bù yǎn shǒu chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>29</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The whip wrapping around the body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>裹身鞭 Guǒ shēn biān</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>30</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turn right and the whip wrapping around the body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身裹身鞭 Yòu zhuǎn shēn guǒ shēn biān</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>31</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The posture of hand and elbow</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>手肘式 Shǒu zhǒu shì</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>32</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The posture of the splitting power</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>劈架子 Pī jià zi</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>33</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turning flowers and playing with sleeves</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>翻花舞袖 Fān huā wǔ xiù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>34</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>35</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Tame the tiger</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>伏虎 Fú hǔ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>36</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Brush the eyebrow</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>抹眉肱 Mǒ méi hōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>37</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right single cloud hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右单云手 Yòu dān yún shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>38</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Cut hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>拗步斩手 Ǎo bù zhǎn shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>39</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left single cloud hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左单云手 Zuǒ dān yún shǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>40</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left forward thrust</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左冲 Zuǒ chōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>41</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Double fist hit downward</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>下双撞捶 Xià shuāng zhuàng chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>42</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right forward thrust</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右冲 Yòu chōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>43</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Turning flowers out of the bottom of the sea</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>海底翻花 Hǎi dǐ fān huā</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>44</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>45</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Foot sweep</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>扫蹚腿 Sǎo tāng tuǐ</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>46</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>47</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left fist cannon</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右拳炮捶 Yòu quán pào chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>48</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right fist cannon</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左拳炮锤 Zuǒ quán pào chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>49</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Step forward and strike with shoulder</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>进步侧靠 Jìn bù cè kào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>50</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the hand</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'><a href='Postures/yanshouhongchui.html' class='text-sky-600 mavenLinkBold hover:underline' data-wikilink-type='WikiLinkNormal'>掩手肱捶 Yǎn Shǒu Hōng Chuí</a></td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>51</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Planting the flower upside down</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>倒插花 Dào chā huā</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>52</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left arm attack twice</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左二肱 Zuǒ èr hōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>53</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left change posture to pile stance</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左变式打桩 Zuǒ biàn shì dǎ zhuāng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>54</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Left turn back and hit with cannon to the head</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>左回头当门炮 Zuǒ huí tóu dāng mén pào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>55</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right arm attack twice</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右二肱 Yòu èr hōng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>56</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right change posture to pile stance</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右变式打桩 Yòu biàn shì dǎ zhuāng</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>57</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Right turn back and hit with cannon to the head</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右回头当门炮 Yòu huí tóu dāng mén pào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>58</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The fist of covering the body</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>撇身捶 Piē shēn chuí</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>59</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Elbow strike with left foot</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>拗拦肘 Ǎo lán zhǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>60</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Elbow strike with right foot</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>顺拦肘 Shùn lán zhǒu</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>61</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Cannon comes out of the bottom</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>窝底炮 Wō dǐ pào</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>62</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Block and enter head-on</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>径拦直入 Jìng lán zhí rù</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>63</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>The wind blows the plum flowers</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>风扫梅花 Fēng sǎo méi huā</td></tr><tr class='border-b-2 border-t-2 border-gray-300'><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>64</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>Buddha’s warrior attendant pounds the mortar</td><td class='py-2 px-2 align-top border-r-2 border-l-2 border-gray-300'>右转身捣碓 Yòu zhuǎn shēn dǎo duì</td></tr></tbody></table><h2 id='links' class='mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Links</h2>
     <ul class='my-3 ml-6 space-y-1 list-disc'>
       
         <li>
-          <a href='https://youtu.be/FkCncgaAxTA' class='text-sky-600 hover:underline' target='_blank' rel='noopener'>洪均生 Hóng Jūnshēng</a>
+          <a href='https://youtu.be/FkCncgaAxTA' class='text-sky-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>洪均生 Hóng Jūnshēng</a>
         </li>
       
         <li>
-          <a href='https://youtu.be/8y-xWcDLdhw' class='text-sky-600 hover:underline' target='_blank' rel='noopener'>何淑淦 Hé Shūgàn</a>
+          <a href='https://youtu.be/8y-xWcDLdhw' class='text-sky-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>何淑淦 Hé Shūgàn</a>
         </li>
       
         <li>
-          <a href='https://youtu.be/0galnbmF2UQ' class='text-sky-600 hover:underline' target='_blank' rel='noopener'>李储功 Lǐ Chǔgōng</a>
+          <a href='https://youtu.be/0galnbmF2UQ' class='text-sky-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>李储功 Lǐ Chǔgōng</a>
         </li>
       
         <li>
-          <a href='https://youtu.be/oAv58dCWmZA' class='text-sky-600 hover:underline' target='_blank' rel='noopener'>张联恩 Zhāng Liánēn</a>
+          <a href='https://youtu.be/oAv58dCWmZA' class='text-sky-600 hover:underline' data-linkicon='external' target='_blank' rel='noopener'>张联恩 Zhāng Liánēn</a>
         </li>
       
     </ul>
   
+
   <div class='flex items-center justify-center mt-2'>
-  <a class='text-gray-300 hover:text-sky-600 text-sm' title='Edit this page on GitHub' href='https://github.dev/edliaw/edliaw.github.io/edit/master/content/Foundations/erlu.md'>
-    <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-      <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
-    </svg>
-  </a>
+  
+    
+      <a class='text-gray-300 hover:text-sky-600 text-sm' title='Edit this page on GitHub' href='https://github.com/edliaw/edliaw.github.io/edit/master/Foundations/erlu.md'>
+        <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+          <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
+        </svg>
+      </a>
+    
+  
 </div>
 </article>
             <div class='flex flex-col lg:flex-row lg:space-x-2'>
@@ -678,14 +850,14 @@
     <ul class='space-y-1'>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/jingangdaodui'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/jingangdaodui.html'>
             金刚捣碓 Jīn Gāng Dǎo Duì
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div><p><code>Buddha’s warrior attendant pounds mortar</code> is moves 1, 5, 13, and 81 in the <a href='Foundations/yilu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>. It is moves 1, 13, and 64 in the <a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
+      <div><p><code>Buddha’s warrior attendant pounds mortar</code> is moves 1, 5, 13, and 81 in the <a href='Foundations/yilu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>. It is moves 1, 13, and 64 in the <a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
     </div>
   
 </div>
@@ -693,14 +865,14 @@
         </li>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/louxiaobu'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/louxiaobu.html'>
             搂膝拗步 Lǒu Xī Ǎo Bù
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div><p><code>Brush the knee in oblique stance</code> is moves 7, 23, and 64 in the <a href='Foundations/yilu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>. It is move 9 in the <a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
+      <div><p><code>Brush the knee in oblique stance</code> is moves 7, 23, and 64 in the <a href='Foundations/yilu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>. It is move 9 in the <a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
     </div>
   
 </div>
@@ -708,14 +880,14 @@
         </li>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/yanshouhongchui'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/yanshouhongchui.html'>
             掩手肱捶 Yǎn Shǒu Hōng Chuí
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div><p><code>Fist of covering the hand</code> is moves 12, 17, 25, 40, and 66 in the <a href='Foundations/yilu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>, and moves 34, 44, 46, 50, and 58 in the <a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
+      <div><p><code>Fist of covering the hand</code> is moves 12, 17, 25, 40, and 66 in the <a href='Foundations/yilu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>, and moves 34, 44, 46, 50, and 58 in the <a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
     </div>
   
 </div>
@@ -723,14 +895,14 @@
         </li>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/lancayi'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/lancayi.html'>
             拦擦衣 Lán Cā Yī
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div><p><code>Block touching coat</code> is moves 2, 26, 52, and 67 in the <a href='Foundations/yilu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>. It is move 2 in the <a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
+      <div><p><code>Block touching coat</code> is moves 2, 26, 52, and 67 in the <a href='Foundations/yilu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>. It is move 2 in the <a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
     </div>
   
 </div>
@@ -738,14 +910,14 @@
         </li>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/pishenchui'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/pishenchui.html'>
             庇身捶 Pì Shēn Chuí
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div><p><code>Fist draping over body</code> is move 15 in the <a href='Foundations/yilu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a> and also move 15 in the <a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
+      <div><p><code>Fist draping over body</code> is move 15 in the <a href='Foundations/yilu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a> and also move 15 in the <a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
     </div>
   
 </div>
@@ -753,14 +925,14 @@
         </li>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/danbian'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/danbian.html'>
             单鞭 Dān Biān
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div><p><code>Single whip</code> is moves 4, 28, 44, 49, 54, 68, and 75 in the <a href='Foundations/yilu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>. It is move 4 in the <a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
+      <div><p><code>Single whip</code> is moves 4, 28, 44, 49, 54, 68, and 75 in the <a href='Foundations/yilu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a>. It is move 4 in the <a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
     </div>
   
 </div>
@@ -768,14 +940,14 @@
         </li>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/liufengsibi'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Postures/liufengsibi.html'>
             六封四闭 Liù Fēng Sì Bì
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div><p><code>Six sealing and four closing</code> is moves 3, 27, 48, 53, 67, and 74 in the <a href='Foundations/yilu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a> and a foundational exercise of <a href='Terms/practicalmethod' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Practical Method</a>. It is move 3 in the <a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
+      <div><p><code>Six sealing and four closing</code> is moves 3, 27, 48, 53, 67, and 74 in the <a href='Foundations/yilu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a> and a foundational exercise of <a href='Terms/practicalmethod.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>Practical Method</a>. It is move 3 in the <a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</p></div>
     </div>
   
 </div>
@@ -783,14 +955,14 @@
         </li>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Terms/practicalmethod'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Terms/practicalmethod.html'>
             Practical Method
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div><a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a></div>
+      <div><a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a></div>
     </div>
   
 </div>
@@ -798,14 +970,14 @@
         </li>
       
         <li>
-          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Lecture%20notes/2032301'>
+          <a class='text-sky-600 mavenLinkBold hover:bg-sky-50' href='Lecture%20notes/2032301.html'>
             Power Hour 5
           </a>
           
             <div class='mb-4 overflow-auto text-sm text-gray-500'>
   
     <div class='pl-2 mt-2 border-l-2 border-sky-200 hover:border-sky-500'>
-      <div>This move is used in other parts of the <a href='Foundations/yilu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a> and in the <a href='Foundations/erlu' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</div>
+      <div>This move is used in other parts of the <a href='Foundations/yilu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>一路 Yīlù</a> and in the <a href='Foundations/erlu.html' class='text-gray-600 font-bold hover:bg-gray-50' data-wikilink-type='WikiLinkNormal'>二路 Èrlù</a>.</div>
     </div>
   
 </div>
@@ -819,7 +991,10 @@
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
     
-      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-sky-500' href='-/tags/taijiquan/forms'>
+      <!-- FIXME: The use of -/tags is wrong, because we should use routeUrl using Ema's encoder 
+        Perhaps Emanote should inject tagMetas with urls.
+      -->
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-sky-500' href='-/tags/taijiquan/forms.html'>
         <!-- DoNotFormat -->
         #taijiquan/forms
         <!-- DoNotFormat -->
@@ -841,7 +1016,7 @@
     </a>
   </div>
   <div>
-    <a href='-/all' title='View Index'>
+    <a href='-/all.html' title='View Index'>
       <svg class='w-6 h-6 hover:text-sky-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
         <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'>
         </path>
@@ -849,12 +1024,12 @@
     </a>
   </div>
   <div>
-    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 0.4.11.0'>
+    <a href='https://emanote.srid.ca' target='_blank' title='Generated by Emanote 1.2.0.0'>
       <img class='w-6 h-6 hover:text-sky-700' src='_emanote-static/emanote-logo.svg' />
     </a>
   </div>
   <div>
-    <a href='-/tags' title='View tags'>
+    <a href='-/tags.html' title='View tags'>
       <svg class='w-6 h-6 hover:text-sky-700' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
         <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z'>
         </path>
@@ -862,7 +1037,7 @@
     </a>
   </div>
   <div>
-    <a href='-/tasks' title='View tasks'>
+    <a href='-/tasks.html' title='View tasks'>
       <svg xmlns='http://www.w3.org/2000/svg' class='w-6 h-6 hover:text-sky-700' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
         <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'></path>
       </svg>
@@ -870,6 +1045,19 @@
   </div>
 </footer>
     </div>
+  
+  <div id='stork-search-container' class='hidden fixed w-screen h-screen inset-0 backdrop-filter backdrop-blur-sm'>
+  <div class='fixed w-screen h-screen inset-0' onclick='window.emanote.stork.toggleSearch()'></div>
+
+  <div class='container mx-auto p-10 mt-10'>
+    <div class='stork-wrapper-flat container mx-auto'>
+      <input id='stork-search-input' data-stork='emanote-search' class='stork-input' placeholder='Search (Ctrl+K) ...' />
+      <div data-stork='emanote-search-output' class='stork-output'></div>
+    </div>
+  </div>
+</div>
+  
+    
   
 </body>
 
