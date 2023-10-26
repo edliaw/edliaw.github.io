@@ -14,5 +14,5 @@ template:
 
 pandoc:
   rewriteClass:
-    avatar: rounded-full w-48 flex items-center float-right
+    avatar: w-48 rounded-full float-right
     video: relative h-0 overflow-hidden max-w-full w-full
