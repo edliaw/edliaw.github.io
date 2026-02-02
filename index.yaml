@@ -6,8 +6,24 @@ page:
 
 template:
   theme: sky
+
+  # You can add your own variables here, like editBaseUrl.
+  # See after-note.tpl to see where editBaseUrl gets used.
   editBaseUrl: https://github.com/edliaw/edliaw.github.io/edit/master
   iconUrl: static/favicon.jpeg
+
+  # Uncomment this to get neuron-style pages
+  # uptree:
+  #   enable: true
+  # sidebar:
+  #   enable: false
+  # toc:
+  #   enable: false
+  # breadcrumbs:
+  #   enable: false
+  # base:
+  #   containerClass: container mx-auto max-w-screen-lg
+
   sidebar:
     collapsed: true
   urlStrategy: pretty
