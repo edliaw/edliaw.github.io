@@ -1,7 +1,7 @@
 {
   nixConfig = {
-    extra-substituters = "https://cache.garnix.io";
-    extra-trusted-public-keys = "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=";
+    extra-substituters = "https://cache.nixos.asia/oss";
+    extra-trusted-public-keys = "oss:KO872wNJkCDgmGN3xy9dT89WAhvv13EiKncTtHDItVU=";
   };
 
   inputs = {
@@ -19,11 +19,18 @@
         emanote = {
           # By default, the 'emanote' flake input is used.
           # package = inputs.emanote.packages.${system}.default;
-          sites."default" = {
-            layers = [{ path = ./.; pathString = "."; }];
-            # port = 8080;
-            baseUrl = "/"; # Change to "/" (or remove it entirely) if using CNAME
-            # prettyUrls = true;
+          sites = rec {
+            # For available options, see:
+            # https://github.com/srid/emanote/blob/master/nix/modules/flake-parts/flake-module/site/default.nix
+            default = {
+              layers = [{ path = ./.; pathString = "."; }];
+              # port = 8080;
+            };
+            # Optimized for deploying to https://<user>.github.io/<repo-name> URLs
+            github-io = default // {
+              check = false;
+              extraConfig.template.baseUrl = "/";
+            };
           };
         };
         devShells.default = pkgs.mkShell {

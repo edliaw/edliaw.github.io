@@ -2,14 +2,14 @@
 
 A template repository to create your own Markdown-based [Emanote](https://github.com/srid/emanote) notebook with [Visual Studio Code](https://code.visualstudio.com/) support, as well as to publish it to GitHub Pages.
 
-See https://emanote.srid.ca/start/resources/emanote-template for details.
+See https://emanote.srid.ca/emanote-template for details.
 
 ## Using this template
 
 Click the "Use this template" green button on Github, and in the resulting repository make the following modifications,
 
 1. Change `index.yaml` to use your site's title (and set the same in `index.md`) and a suitable edit URL.
-1. Start adding `.md` notes at repository root (you can use VSCode or [Obsidian](https://obsidian.md/))
+1. Start adding `.md` notes at repository root (you can use VSCode or [Obsidian](https://emanote.srid.ca/obsidian))
 
 If deploying using GitHub Pages, also:
 
